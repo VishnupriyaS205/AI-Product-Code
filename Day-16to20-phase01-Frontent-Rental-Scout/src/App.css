@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #dbe3ea;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav div {
+  display: flex;
+  gap: 16px;
+}
+
+nav a {
+  color: #475569;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: end;
+  margin: 24px 0;
+}
+
+.filters label {
+  display: grid;
+  gap: 6px;
+}
+
+select,
+button,
+input,
+textarea {
+  padding: 8px 10px;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.listing-card {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #dbe3ea;
+  border-radius: 8px;
+}
+
+.listing-card h3 {
+  margin-top: 0;
+}
+
+.listing-card button {
+  display: block;
+  margin-top: 12px;
+}
+.inquiry-form {
+  display: grid;
+  max-width: 520px;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.inquiry-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.inquiry-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.inquiry-form button {
+  justify-self: start;
+}
+.listing-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.detail-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.home-hero {
+  max-width: 1000px;
+  padding: 64px 32px;
+  border-radius: 14px;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)),
+    url("https://images.unsplash.com/photo-1560448075-bb485b067938?auto=format&fit=crop&w=1200&q=80");
+  background-position: center;
+  background-size: cover;
+}
+
+.home-hero h2 {
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  color: #bfdbfe;
+  font-weight: bold;
+}
+main a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.listing-card a,
+.home-hero a,
+section > a {
+  display: inline-block;
+  margin-top: 12px;
+}

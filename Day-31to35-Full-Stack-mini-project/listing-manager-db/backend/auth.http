@@ -1,0 +1,68 @@
+### Health check
+GET http://localhost:3000/health
+
+### Signup
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "secret123"
+}
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "secret123"
+}
+
+### Current user
+GET http://localhost:3000/auth/me
+Authorization: Bearer your_token_here
+### login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "secret123"
+}
+###create record
+POST http://localhost:3000/students
+Content-Type: application/json
+Authorization: eyJpZCI6NiwibmFtZSI6InRlc3QxIiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSJ9.m-UKO734OIzXWx2LpAR_rU0XwFiLpvlO800THtk65I0
+
+{
+  "student_name": "User A Record",
+  "classroom": 10,
+  "location": "Chennai",
+  "status": "Saved",
+  "description": "This belongs to User A"
+}
+### loginB
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "vishnu@gmail.com",
+  "password": "123@123"
+}
+### try edit as user B
+PUT http://localhost:3000/students/10
+Content-Type: application/json
+Authorization: eyJpZCI6NywibmFtZSI6InZpc2hudSIsImVtYWlsIjoidmlzaG51QGdtYWlsLmNvbSJ9.pBPsWZ9zfoNDmTQv4UMzAH_N2PJ74A2xVYCi3SUwF2E
+
+{
+  "student_name": "Bad Edit",
+  "classroom": 99,
+  "location": "Wrong",
+  "status": "Trying",
+  "description": "User B should not edit this"
+}
+### delete
+DELETE http://localhost:3000/students/10
+Authorization: eyJpZCI6NywibmFtZSI6InZpc2hudSIsImVtYWlsIjoidmlzaG51QGdtYWlsLmNvbSJ9.pBPsWZ9zfoNDmTQv4UMzAH_N2PJ74A2xVYCi3SUwF2E

@@ -1,0 +1,439 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 14px;
+  background:
+    radial-gradient(circle at top left, rgba(217, 70, 239, 0.34), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.36), transparent 34%),
+    linear-gradient(145deg, #14091f, #261144 48%, #090512);
+}
+
+.phone-frame {
+  width: min(100%, 920px);
+  min-height: 560px;
+  position: relative;
+  padding: 28px 28px 92px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(28, 16, 48, 0.78);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+}
+
+.app-header {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #d8b4fe;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stats-row div {
+  padding: 12px 8px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.09);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(11, 7, 22, 0.22);
+}
+
+.stats-row span {
+  display: block;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.stats-row p {
+  margin: 2px 0 0;
+  color: #c4b5fd;
+  font-size: 12px;
+}
+
+.book-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 30px rgba(11, 7, 22, 0.22);
+}
+
+.book-form label {
+  display: grid;
+  gap: 6px;
+  color: #f5f3ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.book-form input,
+.queue-controls input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  font: inherit;
+}
+
+.book-form input::placeholder,
+.queue-controls input::placeholder {
+  color: #a78bfa;
+}
+
+.book-form button {
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  box-shadow: 0 12px 28px rgba(168, 85, 247, 0.36);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.book-info label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.book-info input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.error-text {
+  margin: 4px 0 0;
+  color: #c0392b;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.queue-controls {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.filter-tabs {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(86px, auto);
+  gap: 8px;
+}
+
+.filter-tabs button {
+  padding: 10px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  color: #d8b4fe;
+  background: rgba(255, 255, 255, 0.08);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.filter-tabs button:hover {
+  transform: translateY(-2px);
+}
+
+.filter-tabs .active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  box-shadow: 0 10px 24px rgba(219, 39, 119, 0.28);
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-height: 270px;
+  overflow-y: auto;
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(11, 7, 22, 0.22);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(216, 180, 254, 0.42);
+}
+
+.cover-box {
+  width: 54px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #7c3aed, #ec4899);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.32);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.book-info h2 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.book-info p {
+  margin: 0;
+  color: #c4b5fd;
+  font-size: 13px;
+}
+
+.status {
+  align-self: start;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.completed {
+  color: #bbf7d0;
+  background: rgba(34, 197, 94, 0.18);
+}
+
+.pending {
+  color: #fde68a;
+  background: rgba(245, 158, 11, 0.18);
+}
+
+.book-actions {
+  grid-column: 2 / -1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.book-actions button {
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #7c3aed;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.book-actions .danger {
+  background: #be123c;
+}
+
+.empty-state {
+  padding: 28px 18px;
+  border: 1px dashed #cdd7d0;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.empty-state h2 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #c4b5fd;
+}
+
+.bottom-nav {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 8px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 35px rgba(11, 7, 22, 0.28);
+  backdrop-filter: blur(16px);
+}
+
+.bottom-nav button {
+  padding: 10px 8px;
+  border: 0;
+  border-radius: 16px;
+  color: #c4b5fd;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.bottom-nav .active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+}
+
+.detail-panel {
+  min-height: 260px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(11, 7, 22, 0.22);
+}
+
+.detail-panel h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.detail-panel p {
+  margin: 0;
+  color: #ddd6fe;
+  font-weight: 700;
+}
+
+.progress-track {
+  width: 100%;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #22c55e, #38bdf8);
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .phone-frame {
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 24px 18px 86px;
+  }
+
+  .book-form,
+  .queue-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-tabs {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .book-list {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+
+  .book-card {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .status {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .book-actions {
+    grid-column: 1 / -1;
+  }
+}
+.completed-title {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+.locked-note {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+.clear-button {
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clear-button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+.success-message {
+  margin: 0 0 12px;
+  color: #047857;
+  font-weight: 700;
+  text-align: center;
+}
+.control-label {
+  margin: 10px 0 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6b7280;
+}

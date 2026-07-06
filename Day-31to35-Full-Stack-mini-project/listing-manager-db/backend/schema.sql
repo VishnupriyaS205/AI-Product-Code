@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  password_hash TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS student (
+  id SERIAL PRIMARY KEY,
+  student_name TEXT NOT NULL,
+  classroom INTEGER NOT NULL,
+  location TEXT NOT NULL,
+  status TEXT NOT NULL,
+  user_id INTEGER REFERENCES users(id),
+  description TEXT
+);
